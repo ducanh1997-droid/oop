@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Date(day,month,year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getDay =  function(){
+            return this.day;
+        }
+        this.getMonth = function (){
+            return this.month;
+        }
+        this.getYear = function (){
+            return this.year;
+        }
+        this.setDay = function(day){
+            this.day = day;
+        }
+        this.setMonth = function(month){
+            this.month = month;
+        }
+        this.setYear = function(year){
+            this.year = year;
+        }
+        this.setDate = function(day,month,year){
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        this.toString = function (){
+            return this.day+"/"+this.month+"/"+this.year;
+        }
+    }
+
+    let date = new Date(20,12,1997);
+    date.setDate(1,2,1997);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(date.toString());
+    // alert(day+"/"+month+"/"+year);
+</script>
+</html>

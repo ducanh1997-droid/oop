@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lập trình hướng đối tượng</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+
+</body>
+<script>
+    // function Student(id,name,address){
+    //     this.id = id;
+    //     this.name = name;
+    //     this.address = address;
+    //     this.getInfo = function (){
+    //         return "Id="+this.id +"Name="+this.name+"Address="+this.address;
+    //     }
+    // }
+    // let student = new Student(1,"duc anh","ha noi");
+    // console.log(student.getInfo());
+
+    // let student = {
+    //     id:1,
+    //     name:"duc anh",
+    //     address: "ha noi",
+    //     getInfo: function (){
+    //         return "Id="+this.id +"Name="+this.name+"Address="+this.address;
+    //     }
+    // }
+    // console.log(student.getInfo());
+
+
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+    //
+    // // Create gradient
+    // var grd = ctx.createLinearGradient(0,0,200,0);
+    // grd.addColorStop(0,"red");
+    // grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(10,10,150,80);
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+    var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+</script>
+</html>

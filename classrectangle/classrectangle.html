@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xây dựng lớp mô tả hình chữ nhât</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1368px" height="300px" style="border:1px solid #d3d3d3"/>
+
+</body>
+<script>
+    class Rectangle {
+        constructor(width,height) {
+            this.width = width;
+            this.height = height;
+        }
+        setWidth (width){
+             this.width = width;
+        }
+        setHeight (height){
+            this.height = height;
+        }
+        getWidth (){
+            return this.width;
+        }
+        getHeight (){
+            return this.height;
+        }
+        getArea(){
+            return this.width*this.height;
+        }
+        getPerimeter (){
+            return (this.width+this.height)*2;
+        }
+    }
+
+    function createRectangle(){
+        let ctx = document.getElementById("myCanvas").getContext('2d');
+        let rectangle = new Rectangle(150,100);
+        rectangle.setWidth(300);
+        rectangle.setHeight(200);
+        console.log(rectangle.getArea());
+        console.log(rectangle.getPerimeter());
+        ctx.beginPath();
+        ctx.rect(20, 20, rectangle.width, rectangle.height);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+    }
+
+    createRectangle()
+
+
+</script>
+</html>
